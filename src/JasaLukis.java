@@ -19,4 +19,25 @@ public class JasaLukis {
         }
         System.out.println();
     }
+        // anggota 2
+    public class Pemesanan {
+        private String namaPelanggan;
+        private String jenisBarang;
+        private String desainLukisan;
+        private int harga;
+
+        public Pemesanan(String namaPelanggan, String jenisBarang, String desainLukisan, int harga) {
+            this.namaPelanggan = namaPelanggan;
+            this.jenisBarang = jenisBarang;
+            this.desainLukisan = desainLukisan;
+            this.harga = harga;
+        }
+
+        public void tampilkanDetailPemesanan(){
+            System.out.println("~~~~~ Detail Pemesanan ~~~~~");
+            System.out.println("Nama Pelanggan          : " + namaPelanggan);
+            System.out.println("Jenis Barang            : " + jenisBarang);
+            System.out.println("Desain Lukisan          : " + desainLukisan);
+            System.out.println("Harga                   : " + harga);
+        }
 }
