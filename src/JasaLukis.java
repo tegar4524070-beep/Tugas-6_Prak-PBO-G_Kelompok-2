@@ -41,3 +41,5 @@ public class JasaLukis {
             System.out.println("Harga                   : " + harga);
         }
 }
+
+}
