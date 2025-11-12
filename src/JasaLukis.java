@@ -40,6 +40,36 @@ public class JasaLukis {
             System.out.println("Desain Lukisan          : " + desainLukisan);
             System.out.println("Harga                   : " + harga);
         }
-}
+public int getHarga() {
+            return harga;
+        }
+    }
 
+    // === Method Anggota 3 ===
+    public Pemesanan buatPemesanan(String namaPelanggan, String jenisBarang, String desainLukisan, int harga) {
+        Pemesanan p = new Pemesanan(namaPelanggan, jenisBarang, desainLukisan, harga);
+        return p;
+    }
+
+    // === Main Anggota 3 ===
+    public static void main(String[] args) {
+        String[] barang = {"Sepatu Nike", "Tas Gucci", "Jaket Adidas"};
+        JasaLukis jasa = new JasaLukis("Melaney Art Studio", "Jl. Kemang Raya No.5", barang);
+
+        jasa.tampilkanInfoJasa();
+
+        // Buat pesanan pelanggan
+        Pemesanan p1 = jasa.buatPemesanan("Tegar", "Sepatu Nike", "Motif Api Ungu", 250000);
+        Pemesanan p2 = jasa.buatPemesanan("Reza", "Tas Gucci", "Es Beku", 300000);
+        Pemesanan p3 = jasa.buatPemesanan("Revan", "Sepatu Adidas", "Mobil", 400000);
+
+        // Tampilkan detail pesanan
+        p1.tampilkanDetailPemesanan();
+        p2.tampilkanDetailPemesanan();
+        p3.tampilkanDetailPemesanan();
+
+        // Hitung total biaya
+        int total = p1.getHarga() + p2.getHarga()+ p3.getHarga();
+        System.out.println("Total Biaya Semua Pesanan: Rp " + total);
+    }
 }
